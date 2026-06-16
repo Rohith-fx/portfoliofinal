@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohith S | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+section{
+    padding:100px 8%;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-content h1{
+    font-size:60px;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content h2{
+    color:#8b5cf6;
+    margin:15px 0;
+    min-height:40px;
+}
+
+.hero-content p{
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:40px;
+    text-decoration:none;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    color:white;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.profile-img{
+    width:350px;
+    height:290px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 30px #38bdf8;
+    margin-left: 680px;
+    margin-top: -280px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#38bdf8;
+    margin-bottom:50px;
+}
+
+.about,
+.education,
+.skills,
+.certifications,
+.contact{
+    max-width:1000px;
+    margin:auto;
+}
+
+.about p{
+    text-align:center;
+    line-height:2;
+}
+
+.education-card,
+.cert-card,
+.project-card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-name{
+    margin-bottom:10px;
+}
+
+.bar{
+    height:15px;
+    background:#334155;
+    border-radius:20px;
+}
+
+.progress{
+    height:100%;
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input,
+.contact textarea{
+    margin-bottom:15px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+}
+
+.contact button{
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+}
+
+.socials{
+    margin-top:15px;
+}
+
+.socials a{
+    color:#38bdf8;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+    justify-content:center;
+}
+
+.profile-img{
+    margin-top:40px;
+    width:250px;
+    height:250px;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Portfolio</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h3>👋 Welcome</h3>
+
+<h1>
+Hi, I'm <span>Rohith S</span>
+</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Final Year Computer Science Engineering Student passionate about
+Full Stack Development, Frontend Technologies, and Software Engineering.
+</p>
+
+<a href="/rohithfinal (1).pdf" class="btn">Download Resume</a>
+<a href="#contact" class="btn">Contact Me</a>
+
+</div>
+
+<!-- Replace with your image -->
+<img src="/rohithdp.jpeg" alt="Rohith S" class="profile-img">
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+I am a Final Year Computer Science Engineering student with strong
+knowledge of Web Development, Programming, and Database Management.
+I enjoy building practical software solutions and continuously learning
+modern technologies to improve my technical and problem-solving skills.
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education">
+
+<div class="education-card">
+<h3>B.E Computer Science Engineering</h3>
+<p>Knowledge Institute of Technology</p>
+<p>2023 - 2027</p>
+<p>CGPA : 7.048 / 10</p>
+</div>
+
+<div class="education-card">
+<h3>Higher Secondary Education</h3>
+<p>Vaigai Matric Hr Sec School</p>
+<p>2022 - 2023</p>
+<p>Percentage : 79.2%</p>
+</div>
+
+<div class="education-card">
+<h3>SSLC</h3>
+<p>Vaigai Matric Hr Sec School</p>
+<p>2020 - 2021</p>
+<p>Percentage : 100%</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+<div class="skill-name">HTML & CSS</div>
+<div class="bar"><div class="progress" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">JavaScript</div>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">React JS</div>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Java</div>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">C Programming</div>
+<div class="bar"><div class="progress" style="width:75%"></div></div>
+</div>
+
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Women Safety & POSH Platform</h3>
+<p>
+A web platform for anonymous grievance reporting and emergency alerts
+to improve workplace safety and POSH compliance.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Ticket Booking Website</h3>
+<p>
+Responsive ticket booking application with user-friendly interface
+developed using HTML and CSS.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Pregnancy Care Tracker</h3>
+<p>
+A smart healthcare application designed to help pregnant women monitor their health, track appointments, and receive personalized pregnancy guidance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="achievements">
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="certifications">
+
+<div class="cert-card">
+🏅 100m District Level Third Place (2021)
+</div>
+
+<div class="cert-card">
+🏅 Relay 4x100m District Level Third Place (2021)
+</div>
+
+<div class="cert-card">
+🏆 Handball Zonal Winners (2023)
+</div>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="section-title">Certifications</h2>
+
+<div class="certifications">
+
+<div class="cert-card">
+SQL Mastery with MySQL
+</div>
+
+<div class="cert-card">
+Front-End Technologies
+</div>
+
+<div class="cert-card">
+Oracle Database
+</div>
+
+<div class="cert-card">
+Web Development Training
+</div>
+
+<div class="cert-card">
+Java Training
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="contact">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button class="btn" type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Rohith S</h3>
+
+<p>Final Year Computer Science Engineering Student</p>
+
+<div class="socials">
+<a href="#">LinkedIn</a>
+<a href="#">GitHub</a>
+<a href="#">Email</a>
+</div>
+
+<p style="margin-top:15px;">
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+<script>
+
+const words = [
+"Full Stack Developer",
+"Frontend Developer",
+"Java Programmer",
+"Problem Solver"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let deleting = false;
+
+function type(){
+
+current = words[i];
+
+if(!deleting){
+document.getElementById("typing").textContent =
+current.substring(0,j++);
+}
+else{
+document.getElementById("typing").textContent =
+current.substring(0,j--);
+}
+
+if(j > current.length){
+deleting = true;
+setTimeout(type,1000);
+return;
+}
+
+if(j < 0){
+deleting = false;
+i = (i + 1) % words.length;
+}
+
+setTimeout(type,deleting ? 60 : 120);
+
+}
+
+type();
+
+</script>
+
+</body>
+</html> 
